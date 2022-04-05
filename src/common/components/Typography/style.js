@@ -14,6 +14,26 @@ export const Container = styled.div`
 
     ${(props) => {
         const {
+            bold
+        } = props;
+
+        if(bold == true) {
+            return `font-weight: bold;` 
+        }
+    }}
+
+    ${(props) => {
+        const {
+            color
+        } = props;
+
+        if(color != "") {
+            return `color: ${color};` 
+        }
+    }}
+
+    ${(props) => {
+        const {
             variant,
             type
         } = props;

@@ -4,7 +4,7 @@ function Sample(params) {
     
     return (
         <Container>
-            dadadadad
+            
         </Container>
     )
 }

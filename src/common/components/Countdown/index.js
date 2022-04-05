@@ -39,7 +39,7 @@ export default function Countdown() {
         <Container>
             <Content>
                 <Count
-                    date={new Date(2023, 12 , 14, 18, 0, 0)}
+                    date={new Date(2023, 12 , 16, 18, 0, 0)}
                     renderer={renderer}
                 />
             </Content>

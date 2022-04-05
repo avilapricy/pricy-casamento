@@ -1,12 +1,22 @@
-import Countdown from "../src/common/components/Countdown";
-import Sample from "../src/common/components/Sample";
-import Typography from "../src/common/components/Typography";
-import UnitTime from "../src/common/components/UnitTime";
+import Banner from "../src/common/components/Banner";
+import Footer from "../src/common/components/Footer";
+import Header from "../src/common/components/Header";
+import Mariah from "../src/common/components/Mariah";
+import Pricy from "../src/common/components/Pricy";
 
 export default function Home(props) {
   return (
     <div>
-        <Countdown />
+      <Header />
+
+      <Banner /> 
+
+      <Mariah />
+
+      <Pricy />
+
+      <Footer />
+      
     </div>
   )
 }
