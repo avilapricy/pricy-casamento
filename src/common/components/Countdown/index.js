@@ -5,14 +5,14 @@ import { Container, ContainerItemCountdown, Content, ItemsItemCountdown } from "
 
 export default function Countdown() {
     function renderer({
-        total = 0,
-        days = 0,
-        hours = 0,
-        minutes = 0,
-        seconds = 0,
-        milliseconds = 0,
-        completed = true,
+        total,
+        days,
+        hours,
+        minutes,
+        seconds,
+        completed,
     }) {
+        console.log(hours)
         return (
             <>
                 <ItemCountdown
@@ -30,6 +30,7 @@ export default function Countdown() {
                 <ItemCountdown
                     label="Seconds"
                     units={seconds}
+
                 />
             </>
         )
@@ -54,15 +55,22 @@ function ItemCountdown({
 
     function renderUnitsTime() {
         let stringUnits = String(units);
+        // 6
+        // 3
+        // 11
         let is3Digits = stringUnits.length > 2;
+        let is1Digits = stringUnits.length == 1  ;
         return (
             <>
                 <UnitTime>
                     {stringUnits[0]}
                 </UnitTime>
+                {is1Digits == false && 
                 <UnitTime>
                     {stringUnits[1]}
                 </UnitTime>
+                }
+                
                 {is3Digits &&
                     <UnitTime>
                         {stringUnits[2]}
