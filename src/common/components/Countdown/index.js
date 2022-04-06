@@ -55,9 +55,7 @@ function ItemCountdown({
 
     function renderUnitsTime() {
         let stringUnits = String(units);
-        // 6
-        // 3
-        // 11
+        
         let is3Digits = stringUnits.length > 2;
         let is1Digits = stringUnits.length == 1  ;
         return (
