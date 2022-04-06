@@ -14,6 +14,16 @@ export const Container = styled.div`
 
     ${(props) => {
         const {
+            textAlign
+        } = props;
+
+        if(textAlign != "") {
+            return `text-align: ${textAlign};` 
+        }
+    }}
+
+    ${(props) => {
+        const {
             bold
         } = props;
 

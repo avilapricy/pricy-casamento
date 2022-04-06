@@ -6,25 +6,32 @@ export const ContainerMariah = styled.div`
     justify-content: end;
     height: 400px;
     padding: 16px;
+    overflow: hidden;
 `
 
 export const Content = styled.div`
     display: flex;
+    gap: 90px;
 `
 
 export const Gato = styled.img`
     display: flex;
     justify-content: flex-end;
-    width: 390px;
-    height: 460px;
+    width: 297px;
+    height: 354px;
 `
 
 export const Folha = styled.img`
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    left: 0;
+    left: -171.12px;
     transform: rotate(45deg);
+    opacity: 0.2;
+    width: 634px;
+    height: 486px;
+    top: -68.71px;
+}
 `
 
 export const Info = styled.div`

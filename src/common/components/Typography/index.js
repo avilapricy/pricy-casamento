@@ -5,10 +5,11 @@ function Typography({
     type = "", 
     bold = false,
     color = "",
+    textAlign ="",
     children
 }) {
     return(
-        <Container color={color} variant={variant} type={type} bold={bold}> 
+        <Container textAlign={textAlign}color={color} variant={variant} type={type} bold={bold}> 
             {children}
         </Container>
     )
