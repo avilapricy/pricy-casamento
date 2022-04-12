@@ -20,7 +20,10 @@ export const Content = styled.div`
 `
 
 export const Gato = styled.img`
-    
+    trasition: transform .2s;
+    &:hover {
+        transform: scale(1.5);
+    }
 `
 
 export const Folha = styled.img`

@@ -19,6 +19,10 @@ export const Gato = styled.img`
     justify-content: flex-end;
     width: 297px;
     height: 354px;
+    trasition: transform .2s;
+    &:hover {
+        transform: scale(1.5);
+    }
 `
 
 export const Folha = styled.img`

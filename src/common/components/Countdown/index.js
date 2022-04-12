@@ -12,7 +12,6 @@ export default function Countdown() {
         seconds,
         completed,
     }) {
-        console.log(hours)
         return (
             <>
                 <ItemCountdown
