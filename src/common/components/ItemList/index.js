@@ -1,7 +1,7 @@
 import { Button, useDisclosure } from "@chakra-ui/react";
 import theme from "../../theme";
 import Typography from "../Typography";
-import { ContainerVestido, Info, Image } from "./style";
+import { ContainerVestido, Info, Image, Modal } from "./style";
 import {
     Modal,
     ModalOverlay,
@@ -33,7 +33,6 @@ function ItemList({
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <ContainerVestido onClick={onOpen}>
@@ -47,9 +46,8 @@ function ItemList({
 
                     <ModalFooter>
                         <Button colorScheme='blsue' mr={3} onClick={onClose}>
-                            Close
+                            X
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

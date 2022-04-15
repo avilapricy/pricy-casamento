@@ -26,3 +26,9 @@ export const Image = styled.img`
 export const Info = styled.div`
     
 ` 
+
+export const Modal = styled.div`
+    background: #D7D3CF;
+
+
+`
