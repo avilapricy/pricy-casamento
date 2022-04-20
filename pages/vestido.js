@@ -17,9 +17,10 @@ export default function Home(props) {
             const { img, info, title } = vestido;
             return (
               <ItemList 
-                title={title}
-                info={info} 
-                img={img} 
+               key={index} 
+               title={title} 
+               info={info} 
+               img={img} 
                 
               />
             )

@@ -17,6 +17,7 @@ export default function Home(props) {
             const { img, info, title } = bolo;
             return (
               <ItemList 
+                key={index}
                 title={title}
                 info={info} 
                 img={img} 

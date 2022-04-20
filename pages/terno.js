@@ -16,6 +16,7 @@ export default function Home(props) {
             const { img, info, title } = terno;
             return (
               <ItemList 
+                key={index}
                 title={title}
                 info={info} 
                 img={img} 

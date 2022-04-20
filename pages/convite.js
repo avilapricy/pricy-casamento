@@ -16,7 +16,8 @@ export default function Home(props) {
           convite.map((convite, index) => {
             const { img, info, title } = convite;
             return (
-              <ItemList 
+              <ItemList
+                key={index} 
                 title={title}
                 info={info} 
                 img={img} 
