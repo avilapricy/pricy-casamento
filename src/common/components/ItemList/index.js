@@ -1,7 +1,8 @@
+import React from 'react';
 import { Button, useDisclosure } from "@chakra-ui/react";
 import theme from "../../theme";
 import Typography from "../Typography";
-import { ContainerVestido, Info, Image, Modal } from "./style";
+import { ContainerVestido, Info, Image, ModalConteudo, ModalRodape, ImageModal } from "./style";
 import {
     Modal,
     ModalOverlay,
@@ -9,7 +10,6 @@ import {
     ModalHeader,
     ModalFooter,
     ModalBody,
-    ModalCloseButton,
 } from '@chakra-ui/react'
 
 function ItemList({
@@ -20,9 +20,24 @@ function ItemList({
 }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
+    const OverlayOne = () => (
+        <ModalOverlay
+          bg='blackAlpha.300'
+          backdropFilter='blur(50px) hue-rotate(90deg)'
+        />
+      )
+
+    const [overlay, setOverlay] = React.useState(<OverlayOne />)
+
+
     return (
         <>
-            <ContainerVestido onClick={onOpen}>
+              <ContainerVestido 
+                ml='4'
+                onClick={() => {
+                setOverlay(<OverlayOne />)
+                onOpen()
+            }}>
                 <Image src={img} />
                 <Info>
                     <Typography bold={true} color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{title}</Typography>
@@ -30,25 +45,22 @@ function ItemList({
                 </Info>
             </ContainerVestido>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} isCentered onClose={onClose} size="xl" >
+                {overlay}
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalCloseButton />
-                    <ModalBody>
+                    {/* <ButtonClose /> */}
+                    <ModalConteudo>
                         <ContainerVestido onClick={onOpen}>
-                            <Image src={img} />
+                            <ImageModal src={img} />
                             <Info>
-                                <Typography bold={true} color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{title}</Typography>
+                                <Typography color={theme.colors.primary.primary3} variant="primary" type="h2">{title}</Typography>
                                 <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
                             </Info>
                         </ContainerVestido>
-                    </ModalBody>
+                    </ModalConteudo>
 
-                    <ModalFooter>
-                        <Button colorScheme='blsue' mr={3} onClick={onClose}>
-                            X
-                        </Button>
-                    </ModalFooter>
+                    <ModalRodape /> 
                 </ModalContent>
             </Modal>
         </>

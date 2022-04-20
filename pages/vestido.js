@@ -16,10 +16,11 @@ export default function Home(props) {
           vestidos.map((vestido, index) => {
             const { img, info, title } = vestido;
             return (
-              <ItemList
+              <ItemList 
                 title={title}
-                info={info}
-                img={img}
+                info={info} 
+                img={img} 
+                
               />
             )
           })
