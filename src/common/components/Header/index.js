@@ -10,7 +10,7 @@ function Header() {
     return (
         <div>
             <Countdown />
-            <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: '6px', paddingBottom: '24px' }}>
                 <br />
                 <Logo />
                 <Menu />

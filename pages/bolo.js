@@ -1,19 +1,36 @@
+import Footer from "../src/common/components/Footer";
 import Header from "../src/common/components/Header";
 import ItemList from "../src/common/components/ItemList";
+import { ContainerList } from "../src/common/components/ItemList/style";
+import bolo from '../public/bolo.json';
 
 export default function Home(props) {
+
   return (
     <div>
       <Header />
-      <ItemList 
-         title="Bolo 1"
-      />
-      <ItemList 
-         title="Bolo 2"
-      />
-      <ItemList 
-         title="Bolo 3"
-      />
+
+      <ContainerList>
+
+        {
+          bolo.map((bolo, index) => {
+            const { img, info, title } = bolo;
+            return (
+              <ItemList 
+                title={title}
+                info={info} 
+                img={img} 
+                
+              />
+            )
+          })
+        }
+
+      </ContainerList>
+
+
+      <Footer />
+
     </div>
   )
 }

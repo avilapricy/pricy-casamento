@@ -10,7 +10,7 @@ export const ContainerList = styled.div`
 
 `
 
-export const ContainerVestido = styled.div`
+export const ContainerItemList = styled.div`
     display: flex;
     gap: 20px;
 `
@@ -50,3 +50,19 @@ export const ImageModal = styled.img`
 //     margin-left: auto;
 //     margin-right: auto;
 // `
+
+export const Modal = styled.div`
+border: 1px solid red;
+    background: transparent;
+    width: 1206px;
+    height: 603px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    ${(props) => {
+        if(!props.isOpen) {
+            return "display: none;" 
+        }
+    }}
+`

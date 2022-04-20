@@ -10,8 +10,8 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     cursor: pointer;
-    width: 100px;
-    height: 75px;
+    width: 123px;
+    height: 32px;
     display: flex;
     justify-content: center;
     padding: 10px;

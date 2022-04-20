@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Convite 1",
+        "info": "coisas sobre o vestido bla bla bla",
+        "img": "/convite/convite 1.jpeg"
+    },
+    {
+        "title": "Convite 2",
+        "info": "coisas sobre o convite bla bla bla",
+        "img": "/convite/convite 2.jpeg"
+    },
+    {
+        "title": "Convite 3",
+        "info": "coisas sobre o convite bla bla bla",
+        "img": "/convite/convite 3.jpeg"
+    },
+    {
+        "title": "Convite 4",
+        "info": "coisas sobre o convite bla bla bla",
+        "img": "/convite/convite 4.jpeg"
+    },
+    {
+        "title": "Convite 5",
+        "info": "coisas sobre o convite bla bla bla",
+        "img": "/convite/convite 5.jpeg"
+    },
+    {
+        "title": "Convite 6",
+        "info": "coisas sobre o convite bla bla bla",
+        "img": "/convite/convite 6.jpeg"
+    }
+]

@@ -1,16 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, useDisclosure } from "@chakra-ui/react";
 import theme from "../../theme";
 import Typography from "../Typography";
-import { ContainerVestido, Info, Image, ModalConteudo, ModalRodape, ImageModal } from "./style";
-import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-} from '@chakra-ui/react'
+import { ContainerItemList, Info, Image, ModalConteudo, ModalRodape, ImageModal, Modal } from "./style";
+import { motion } from 'framer-motion';
+
 
 function ItemList({
     title = "",
@@ -22,49 +16,111 @@ function ItemList({
 
     const OverlayOne = () => (
         <ModalOverlay
-          bg='blackAlpha.300'
-          backdropFilter='blur(50px) hue-rotate(90deg)'
+            bg='blackAlpha.300'
+            backdropFilter='blur(50px) hue-rotate(90deg)'
         />
-      )
+    )
 
     const [overlay, setOverlay] = React.useState(<OverlayOne />)
+
+    useEffect(() => {
+        function close(e) {
+            if (!e.path.find(target => {
+                if(target.id == "modal-ItemList") {
+                    return true;
+                }
+                return false
+            }))
+                onClose()
+        }
+        if (isOpen) {
+            setTimeout(() => {
+                document.body.addEventListener("click", close)
+            }, 500);
+        }
+        return () => {
+            document.body.removeEventListener("click", close)
+        }
+    }, [isOpen])
 
 
     return (
         <>
-              <ContainerVestido 
+            <ContainerItemList
                 ml='4'
                 onClick={() => {
-                setOverlay(<OverlayOne />)
-                onOpen()
-            }}>
+                    setOverlay(<OverlayOne />)
+                    onOpen()
+                }}>
                 <Image src={img} />
                 <Info>
                     <Typography bold={true} color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{title}</Typography>
                     <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
                 </Info>
-            </ContainerVestido>
+            </ContainerItemList>
 
-            <Modal isOpen={isOpen} isCentered onClose={onClose} size="xl" >
-                {overlay}
-                <ModalOverlay />
-                <ModalContent>
-                    {/* <ButtonClose /> */}
-                    <ModalConteudo>
-                        <ContainerVestido onClick={onOpen}>
-                            <ImageModal src={img} />
-                            <Info>
-                                <Typography color={theme.colors.primary.primary3} variant="primary" type="h2">{title}</Typography>
-                                <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
-                            </Info>
-                        </ContainerVestido>
-                    </ModalConteudo>
+            <Modal isOpen={isOpen} id="modal-ItemList">
+                {
+                    isOpen && <>
+                        <motion.div initial="hidden" animate="visible" variants={{
+                            hidden: {
+                                scale: .8,
+                                opacity: 0
+                            },
+                            visible: {
+                                scale: 1,
+                                opacity: 1,
+                                transition: {
+                                    delay: .15
+                                }
+                            },
+                        }}>
 
-                    <ModalRodape /> 
-                </ModalContent>
+                            <ModalConteudo>
+                                <ContainerItemList onClick={onOpen}>
+                                    <ImageModal src={img} />
+                                    <Info>
+                                        <Typography color={theme.colors.primary.primary3} variant="primary" type="h2">{title}</Typography>
+                                        <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
+                                    </Info>
+                                </ContainerItemList>
+                            </ModalConteudo>
+                        </motion.div>
+
+                    </>
+                }
             </Modal>
         </>
     )
 }
 
 export default ItemList;
+
+// import {
+//     Modal,
+//     ModalOverlay,
+//     ModalContent,
+//     ModalHeader,
+//     ModalFooter,
+//     ModalBody,
+// } from '@chakra-ui/react'
+// <Modal isOpen={isOpen} onClose={onClose} isCentered size="lg" >
+//                 {overlay}
+//                 <ModalOverlay />
+//                 <ModalContent>
+//                     {/* <ButtonClose /> */}
+//                     <ModalBody>
+                        // <ModalConteudo>
+                        //     <ContainerVestido onClick={onOpen}>
+                        //         <ImageModal src={img} />
+                        //         <Info>
+                        //             <Typography color={theme.colors.primary.primary3} variant="primary" type="h2">{title}</Typography>
+                        //             <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
+                        //         </Info>
+                        //     </ContainerVestido>
+                        // </ModalConteudo>
+//                     </ModalBody>
+
+//                     {/* <ModalRodape />  */}
+//                 </ModalContent>
+//             </Modal>
