@@ -1,7 +1,8 @@
-import styledComponents from "styled-components";
+import styled from "styled-components";
 
-export default Container = styled.img`
-    height: 1365;
-    width: 59;
-    display: flex;
-`
+export const Container = styled.div`
+    @media (min-width: 375px) and (min-height: 667px) {
+        font-size: 47px;
+        text-align: center;
+    }
+    `
