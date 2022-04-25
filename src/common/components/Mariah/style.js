@@ -7,21 +7,33 @@ export const ContainerMariah = styled.div`
     height: 400px;
     padding: 16px;
     overflow: hidden;
+    
+    @media (max-width: 375px) and (max-height: 667px) {
+        height: 202px;
+    }
 `
 
 export const Content = styled.div`
     display: flex;
     gap: 90px;
+    @media (max-width: 375px) and (max-height: 667px) {
+        gap: 18px;
+    }
 `
 
-export const Gato = styled.img`
+export const Duda = styled.img`
     display: flex;
     justify-content: flex-end;
     width: 297px;
     height: 354px;
-    trasition: transform .2s;
+    border-radius: 155px;
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.3);
+        trasition: transform .6s;
+    }
+    @media (max-width: 375px) and (max-height: 667px) {
+            width: 202px;
+            height: 140px;
     }
 `
 
@@ -35,7 +47,11 @@ export const Folha = styled.img`
     width: 634px;
     height: 486px;
     top: -68.71px;
-}
+    @media (max-width: 375px) and (max-height: 667px) {
+        transform: rotate(40deg);
+        top: -145.7px;
+        width: 600px;
+    }
 `
 
 export const Info = styled.div`
@@ -44,5 +60,8 @@ export const Info = styled.div`
     flex-direction: column;
     align-itens: end;
     gap: 32px;
+    @media (max-width: 375px) and (max-height: 667px) {
+        gap: 9px;
+    }
 `
 

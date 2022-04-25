@@ -52,7 +52,7 @@ export const ImageModal = styled.img`
 // `
 
 export const Modal = styled.div`
-border: 1px solid red;
+    border: 1px solid red;
     background: transparent;
     width: 1206px;
     height: 603px;

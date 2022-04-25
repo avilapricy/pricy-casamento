@@ -6,9 +6,9 @@ export const ContainerFooter = styled.div`
     display: flex;
     padding: 122px;
     padding-bottom: 1px;
-    // @media (min-width: 375px) and (min-height: 667px){
-    //     padding: 16px;
-    // }
+    @media (max-width: 375px) and (max-height: 667px){
+        padding: 16px;
+    }
 `
 
 export const ImgFooter = styled.img`
