@@ -8,7 +8,7 @@ export const ContainerMariah = styled.div`
     padding: 16px;
     overflow: hidden;
     
-    @media (max-width: 375px) and (max-height: 667px) {
+    @media (max-width: 480px){
         height: 202px;
     }
 `
@@ -16,7 +16,7 @@ export const ContainerMariah = styled.div`
 export const Content = styled.div`
     display: flex;
     gap: 90px;
-    @media (max-width: 375px) and (max-height: 667px) {
+    @media (max-width: 480px){
         gap: 18px;
     }
 `
@@ -31,7 +31,7 @@ export const Duda = styled.img`
         transform: scale(1.3);
         trasition: transform .6s;
     }
-    @media (max-width: 375px) and (max-height: 667px) {
+    @media (max-width: 480px){
             width: 202px;
             height: 140px;
     }
@@ -47,7 +47,7 @@ export const Folha = styled.img`
     width: 634px;
     height: 486px;
     top: -68.71px;
-    @media (max-width: 375px) and (max-height: 667px) {
+    @media (max-width: 480px){
         transform: rotate(40deg);
         top: -145.7px;
         width: 600px;
@@ -60,7 +60,7 @@ export const Info = styled.div`
     flex-direction: column;
     align-itens: end;
     gap: 32px;
-    @media (max-width: 375px) and (max-height: 667px) {
+    @media (max-width: 480px){
         gap: 9px;
     }
 `

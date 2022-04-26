@@ -71,7 +71,7 @@ function ItemList({
                                 scale: 1,
                                 opacity: 1,
                                 transition: {
-                                    delay: .15
+                                    delay: .13
                                 }
                             },
                         }}>

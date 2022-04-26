@@ -52,8 +52,8 @@ export const ImageModal = styled.img`
 // `
 
 export const Modal = styled.div`
-    border: 1px solid red;
-    background: transparent;
+    border-style: outset;
+    background: #E5E5E5;
     width: 1206px;
     height: 603px;
     position: fixed;
