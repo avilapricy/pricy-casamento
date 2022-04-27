@@ -7,6 +7,10 @@ export const ContainerList = styled.div`
     padding: 100px;
     gap: 35px;
     overflow: hidden;
+    @media (max-width: 480px) {
+        flex-direction: columns;
+        gap: 20px;
+    }
 
 `
 
@@ -28,8 +32,8 @@ export const Info = styled.div`
 ` 
 
 export const ModalConteudo = styled.div`
-    background: #D7D3CF;
-    border-radius: 10px;
+    background: #909470;
+    border-radius: 17px;
     width: 1206px;
     height: 603px;
     padding: 80px;
@@ -52,8 +56,6 @@ export const ImageModal = styled.img`
 // `
 
 export const Modal = styled.div`
-    border-style: outset;
-    background: #E5E5E5;
     width: 1206px;
     height: 603px;
     position: fixed;

@@ -80,8 +80,8 @@ function ItemList({
                                 <ContainerItemList onClick={onOpen}>
                                     <ImageModal src={img} />
                                     <Info>
-                                        <Typography color={theme.colors.primary.primary3} variant="primary" type="h2">{title}</Typography>
-                                        <Typography color={theme.colors.primary.primary3} variant="primary" type="paragraphy1">{info}</Typography>
+                                        <Typography color={theme.colors.primary.primary1} variant="primary" type="h2">{title}</Typography>
+                                        <Typography color={theme.colors.primary.primary1} variant="primary" type="paragraphy1">{info}</Typography>
                                     </Info>
                                 </ContainerItemList>
                             </ModalConteudo>
