@@ -6,7 +6,7 @@ export const Container = styled.div`
         transform: scale(1.3);
         trasition: transform .6s;
     }
-    @media (min-width: 480px) {
+    @media (max-width: 480px) {
         font-size: 47px;
         text-align: center;
     }
