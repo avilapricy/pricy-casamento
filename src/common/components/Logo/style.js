@@ -7,9 +7,5 @@ export const Container = styled.div`
     }
     `
 
-export const LogoContent = styled.div`
-    &:hover {
-        transform: scale(1.3);
-        trasition: transform .6s;
-    }
-`
+// export const Typography = styled.div`
+  
