@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Button, useDisclosure } from "@chakra-ui/react";
 import theme from "../../theme";
 import Typography from "../Typography";
+import { useMediaQuery } from '@chakra-ui/react'
 import { ContainerItemList, Info, Image, ModalConteudo, ModalRodape, ImageModal, Modal } from "./style";
 import { motion } from 'framer-motion';
 
@@ -43,6 +44,8 @@ function ItemList({
         }
     }, [isOpen])
 
+    const [isMobile] = useMediaQuery('(max-width: 1000px)')
+
 
     return (
         <>
@@ -80,8 +83,8 @@ function ItemList({
                                 <ContainerItemList onClick={onOpen}>
                                     <ImageModal src={img} />
                                     <Info>
-                                        <Typography color={theme.colors.primary.primary1} variant="primary" type="h2">{title}</Typography>
-                                        <Typography color={theme.colors.primary.primary1} variant="primary" type="paragraphy1">{info}</Typography>
+                                        <Typography bold={true} color={theme.colors.primary.primary1} variant="primary" type={isMobile ? "subtitle2" : "h2"}>{title}</Typography>
+                                        <Typography color={theme.colors.primary.primary1} variant="primary" type={isMobile ? "paragraphy1" : "subtitle1"}>{info}</Typography>
                                     </Info>
                                 </ContainerItemList>
                             </ModalConteudo>

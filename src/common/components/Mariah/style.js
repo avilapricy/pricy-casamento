@@ -7,9 +7,8 @@ export const ContainerMariah = styled.div`
     height: 400px;
     padding: 16px;
     overflow: hidden;
-    
     @media (max-width: 480px){
-        height: 202px;
+        height: 170px;
     }
 `
 

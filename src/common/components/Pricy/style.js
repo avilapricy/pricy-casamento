@@ -12,7 +12,7 @@ export const ContainerPricy = styled.div`
         position: relative;
         overflow: hidden;
         @media (max-width: 480px){
-            height: 202px;
+            height: 170px;
         }
 `
 
@@ -27,7 +27,9 @@ export const Content = styled.div`
 
 export const Pri = styled.img`
     trasition: transform .2s;
-    border-radius: 150px;
+    border-radius: 155px;
+    height: 347px;
+    width: 296px;
     &:hover {
         transform: scale(1.3);
         trasition: transform .6s;
@@ -35,7 +37,12 @@ export const Pri = styled.img`
     @media (max-width: 480px) {
         width: 202px;
         height: 140px;
+        
     }
+    // @media (hover: hover) {
+    //     transform: scale(1.3);
+    //     trasition: transform .10s;
+    // }
 `
 
 export const Folha = styled.img`

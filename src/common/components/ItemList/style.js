@@ -8,8 +8,9 @@ export const ContainerList = styled.div`
     gap: 35px;
     overflow: hidden;
     @media (max-width: 480px) {
-        flex-direction: columns;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px;
     }
 
 `
@@ -37,6 +38,11 @@ export const ModalConteudo = styled.div`
     width: 1206px;
     height: 603px;
     padding: 80px;
+    @media (max-width: 480px) {
+        width: 390px;
+        height: 282px;
+        padding: 45px;
+    }
 }
 `
 
@@ -49,11 +55,11 @@ export const ImageModal = styled.img`
     width: 392.13px;
     height: 456.41px; 
     border-radius: 10px;
+    @media (max-width: 480px) {
+        width:188px;
+        height:188px;
+    }
 `
-// export const ModalBox = styled.div`
-//     margin-left: auto;
-//     margin-right: auto;
-// `
 
 export const Modal = styled.div`
     width: 1206px;
@@ -67,4 +73,10 @@ export const Modal = styled.div`
             return "display: none;" 
         }
     }}
+    @media (max-width: 480px) {
+        width: 345px;
+        height: 231px;
+        position: fixed;
+        margin: -5%;
+    }
 `
