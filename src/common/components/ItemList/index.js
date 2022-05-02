@@ -5,6 +5,7 @@ import Typography from "../Typography";
 import { useMediaQuery } from '@chakra-ui/react'
 import { ContainerItemList, Info, Image, ModalConteudo, ModalRodape, ImageModal, Modal } from "./style";
 import { motion } from 'framer-motion';
+import AddItemList from '../AddItemList';
 
 
 function ItemList({
