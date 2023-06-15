@@ -1,10 +1,6 @@
 import { useMediaQuery } from "@chakra-ui/react";
-import AddItemList from "../AddItemList";
-import Banner from "../Banner";
 import Countdown from "../Countdown";
-import Footer from "../Footer";
 import Logo from "../Logo";
-import Mariah from "../Mariah";
 import Menu from "../Menu";
 
 function Header() {
@@ -20,11 +16,6 @@ function Header() {
                 <br />
                 <Logo />
                 <Menu />
-                <AddItemList />
-
-
-
-
             </div>
         </div>
     )
