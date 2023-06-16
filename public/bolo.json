@@ -1,17 +1,17 @@
 [
     {
         "title": "Bolo 1",
-        "info": "coisas sobre o Bolo bla bla bla",
+        "info": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
         "img": "/bolo/bolo 1.jpeg"
     },
     {
         "title": "Bolo 2",
-        "info": "coisas sobre o Bolo bla bla bla",
+        "info": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
         "img": "/bolo/bolo 2.jpeg"
     },
     {
         "title": "Bolo 3",
-        "info": "coisas sobre o Bolo bla bla bla",
+        "info": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
         "img": "/bolo/bolo 3.jpeg"
     }
 ]
